@@ -20,12 +20,14 @@ export class Vargs {
   get all() {
     return this._arrays;
   }
-  get callbackGiven() {
+  callbackGiven() {
     return this._callback !== undefined;
+  }
+  get array() {
+    return this._arrays;
   }
 
   get callback() {
     return this._callback === undefined ? () => {} : this._callback;
   }
 }
-
